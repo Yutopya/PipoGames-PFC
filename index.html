@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PFC Grupo4</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yu y Raúl">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="IMG/dim.png">
+    <link rel="stylesheet" href="fontawesome.js">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <section class="tienda">
+            <p>Pipo Juegos</p>
+        </section>
+        <div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul> <!-- Listas con los filtros de plataforma --> 
+                <li>
+                    <i class="fas fa-desktop"></i>
+                    <select name="PC" >
+                        <option>PC</option>
+                        <option>Steam</option>
+                        <option>Epic</option>
+                        <option>Instant</option>
+                    </select>
+                </li>
+                <li><i class="fab fa-playstation"></i>
+                    <select name="PS">
+                        <option>PS</option>
+                        <option>PS4</option>
+                        <option>PS5</option>
+                    </select>
+                </li>
+                <li><i class="fab fa-xbox"></i>
+                    <select name="xbox">
+                        <option>Xbox</option>
+                        <option>Xbox one</option>
+                        <option>Xbox series X</option>
+                    </select>
+                </li>
+                <li><i class="fas fa-vr-cardboard"></i>
+                <select name="switch">
+                    <option>Nintendo</option>
+                    <option>Switch</option>
+                    <option>Nintendo 3ds</option>
+                </li>
+                </select>
+            </ul>
+        </div>
+        <div> <!--Botón de inicio de sesion-->
+            <div class="sesion">
+                <button id="init"><a href="iniciosesion.html"><i class="fas fa-user"></i>Iniciar Sesión</a></button>
+            </div>
+        </div>
+    </header>
+    <nav> <!--Barra de busqueda-->
+        <div class="busqueda">
+            <i class="fas fa-search" id="busca"></i> 
+            <textarea rows="1" cols="40"></textarea>     
+        </div>
+    </nav>
+    <main> <!--Cards con todos los juegos-->
+        <div class="card">
+            <div id="outer-wilds">
+                <div class="fondoV"><!--Aqui es donde estan metidos los videos-->
+                    <video muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=25;">
+                        <source src="Video/Outer Wilds - Official Reveal Trailer.mp4#t=25" type="video/mp4"></source>
+                </div>
+            </div>
+            <div class="container"> <!--Aqui esta el pie de foto-->
+              <h4><b>Outer Wilds</b></h4> 
+            </div>
+          </div>
+          <div class="card">
+            <div id="RR2">
+                <div class="fondoV">
+                    <video muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=20">
+                        <source src="Video/Risk of Rain 2_ Launch Trailer.mp4#t=20" type="video/mp4"></source>
+                </div>
+            </div>
+            <div class="container">
+              <h4><b>Risk of Rain 2</b></h4> 
+            </div>
+          </div>
+          <div class="card">
+            <div id="GTAV">
+                <div class="fondoV">
+                    <video muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=20;">
+                        <source src="Video/Grand Theft Auto V Trailer.mp4#t=20" type="video/mp4"></source>
+                </div>
+            </div>
+            <div class="container">
+              <h4><b>Grand Theft Auto V</b></h4> 
+            </div>
+          </div>
+          <div class="card">
+            <div id="Astroneer">
+                <div class="fondoV">
+                    <video muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=7;">
+                        <source src="Video/ASTRONEER - Release Trailer.mp4#t=7" type="video/mp4"></source>
+                </div>
+            </div>
+            <div class="container">
+              <h4><b>Astroneer</b></h4> 
+            </div>
+          </div>
+          <div class="card">
+            <div id="Castle-crashers">
+                <div class="fondoV">
+                    <video muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=21;">
+                        <source src="Video/Castle Crashers Remastered Announcement Trailer.mp4#t=21" type="video/mp4"></source>
+                </div>
+            </div>
+            <div class="container">
+              <h4><b>Castle crashers</b></h4> 
+            </div>
+          </div>
+          <div class="card">
+            <div id="Cyberpunk2077">
+                <div class="fondoV">
+                    <video muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=23;">
+                        <source src="Video/Cyberpunk 2077 - Tráiler E3 2018.mp4#t=23" type="video/mp4"></source>
+                </div>
+            </div>
+            <div class="container">
+              <h4><b>Cyberpunk2077</b></h4> 
+            </div>
+          </div>
+          <div class="card">
+            <div id="A-hat-in-time">
+                <div class="fondoV">
+                    <video muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=10;">
+                        <source src="Video/A Hat in Time - Announcement Trailer _ PS4.mp4#t=10" type="video/mp4"></source>
+                </div>
+            </div>
+            <div class="container">
+              <h4><b>A hat in time</b></h4> 
+            </div>
+          </div>
+    </main>
+    <footer>
+        <p>Holi 👋</p>
+    </footer>
+</body>
+</html>

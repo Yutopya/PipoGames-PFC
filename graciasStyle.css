@@ -1,0 +1,48 @@
+html{
+    background-color: burlywood;
+}
+
+main{ /*Posicion del main*/
+    margin-top: 30px;
+    background-color: white;
+    width: 50%;
+    margin-bottom: 30px;
+    border: black solid;
+    border-radius: 5em;
+    margin-left: 25%;
+}
+.gracias{ /*Posicion del texto de gracias*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+.texto{
+    width: 70%;
+}
+p{
+    text-align: center;
+    width: 100%;
+}
+img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.botones{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.boton{/*Posicion de los botones de redirección*/
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 5em;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.boton:hover{
+    background-color: gainsboro;
+}

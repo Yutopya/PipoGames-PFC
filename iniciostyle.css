@@ -1,0 +1,69 @@
+html{
+    background-color: burlywood;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav{ /*Contenedor para el botón de vuelta a la pagina web*/   
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.pipo{
+    padding: 1em;
+    border: black solid;
+    border-radius: 5em;
+}
+button:hover{ 
+    background-color: burlywood;
+}
+main{/*Contenedor de todo el contenido de inicio de sesion*/  
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: white;
+    width: 40%;
+    margin-bottom: 30px;
+    border: black solid;
+    border-radius: 30px;
+    background-color: gainsboro;
+}
+#todo{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#login{
+    display: flex;
+    justify-content: center;
+}
+#datos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 15%;
+}
+input{
+    width: 60%;
+}
+#boton{
+    margin-left: 15%;
+}
+.inputs{
+    margin-bottom: 3%;
+}
+#enviar{
+    margin-top: 2%;
+    border-radius: 5em;
+}
+#cambio{
+    margin-left: 15%;
+    margin-right: 10%;
+    font-size: smaller;
+}

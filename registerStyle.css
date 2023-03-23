@@ -1,0 +1,62 @@
+html{
+    background-color: burlywood;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav{ /*Posicion del boton de vuelta a la pagina principal*/
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.pipo{
+    padding: 1em;
+    border: black solid;
+    border-radius: 5em;
+}
+main{ /*Posicion del main*/
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: white;
+    width: 40%;
+    margin-bottom: 30px;
+    border: black solid;
+    border-radius: 30px;
+    background-color: gainsboro;
+}
+#todo{ /*Posicion del contenido de dentro del main*/ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.enter{
+    margin-bottom: 2em;
+}
+.inputs{ /*Posicion de los inputs*/
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+#texto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    border-radius: 5em;
+}
+button:hover{
+    background-color: burlywood;
+}

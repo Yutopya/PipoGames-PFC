@@ -1,0 +1,246 @@
+html, body {
+    margin: 0; 
+    height: 100%; 
+    background-color: gainsboro;
+}
+header{ /*El header tiene la posición clavada al techo de la pagina*/
+    background-color: burlywood;    
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+}
+.tienda{
+    margin-left: 20px;
+    font-family: "Comic Sans MS", "Comic Sans";
+}
+.sesion{ /*Cambia el cursor a pointer*/
+    cursor: pointer;
+}
+i{
+    margin-right: 20px;
+}
+select{
+    margin-right: 10px;
+
+}
+header section, header div{
+    display: flex;
+    align-items: center;
+}
+#init{ /*Aqui se hacen cambios en el boton de inicio de sesion*/
+    color: black;
+    margin-right: 10px;
+    background-color: burlywood;
+    border:none;
+}
+select{
+    background-color: burlywood; 
+    border: none;
+}
+nav{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.busqueda{ /*Todo esto representa la decoración de la barra de busqueda*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:4px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5em;
+    padding-left: 10px;
+    background-color: burlywood;
+    margin-top: 1px;
+}
+textarea{ /*Aqui es donde hago cambios en la barra de busqueda para que se adapte al la decoración aplicada anteriormente*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    font-family: "Comic Sans MS", "Comic Sans";
+    background-color: transparent;
+    border: none;
+    resize: none;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+select:focus, input:focus{
+    outline: none;
+}
+main{/* Este es el espacio reservado para meter las cards con los juegos dentro*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 75px;
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 15px;
+    padding:2em;
+    background-color: burlywood;
+    transition: all .1s linear; 
+} 
+.card{ /*Configuracion de espacio para cada card y su transicion para cuando cambie de tamaño mas adelante*/
+    transition: 0.4s;
+    width: 30%;
+    border-radius: 10px;
+    background-color: bisque;
+}
+.card:hover {/*Le añade una sombra al hacer hover sobre una carta*/
+    box-shadow: 8px 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+    padding: 2px 15px;
+}
+.fondoV{ /*Esto se refiere al apartado con el video del card*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+video{/*El video es invisible*/
+    width: 100%;
+    opacity: 0;
+
+}
+video:hover{/*Hasta que se pasa el raton por encima*/
+    transition: 0.4s;
+    opacity: 100;
+}
+#check{
+    display: none;
+}
+#outer-wilds{ /*Todos estos ids representan la card de cada juego para ponerles un fondo diferente*/
+    background-image: url(img/outer-wilds.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#RR2{
+    background-image: url(img/RR2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#GTAV{
+    background-image: url(img/gtavcover.png );
+    background-size: 100%;
+        background-repeat: no-repeat;
+}
+#Astroneer{
+    background-image: url(img/astroneer-logo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#Castle-crashers{
+    background-image: url(img/castle-crashers.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#Cyberpunk2077{
+    background-image: url(img/cyberpunklogo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#A-hat-in-time{
+    background-image: url(img/ahatIntime.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+footer{/*Un footer que mas o menos replica el header para mantener consistencia en la pagina*/
+    margin-top: 70px;
+    background-color: burlywood;    
+    display: flex;
+    justify-content: space-between;
+    border-top: 5px;
+    border-top-style: solid;
+    border-top-color: black;
+}
+footer p{
+    margin-left: 20px;
+    font-family: "Comic Sans MS", "Comic Sans";
+}
+.checkbtn{ /*Boton para cuando los selectores se hagan pequeños y se guarden en un desplegable*/
+    font-size: 30px;
+    margin-left: 30px;
+    line-height: 60px;
+    cursor: pointer;
+    padding-right: 20px;
+    float: right;
+    display: none;
+}
+@media screen and (min-width: 200px) and (max-width: 768px){
+    main{/*Cambios para cuando la pagina es muy pequeña (movil)*/
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .card{
+        width: 100%;
+        border-radius: 10px;
+        background-color: bisque;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1279px){
+    main{/*Cambios para cuando la pagina es mediana (tablet)*/
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    .card{
+        width: 40%;
+        border-radius: 10px;
+        background-color: bisque;
+    }
+}
+@media screen and (min-width: 1280px){
+    main{/*Cambios para cuando la pagina es grande (Portatil/PC)*/
+        margin-left: 13%;
+        margin-right: 13%;
+    }
+    .card{
+        width: 30%;
+        border-radius: 10px;
+        background-color: bisque;
+    }
+}
+@media screen and (max-width: 847px){
+    .checkbtn{ /*Cambios en el header para cuando se haga muy pequeño y los selectores se solapen, se guarden en una */
+        display: block;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        height: 50vh;
+        text-align: center;
+        transition: all .5s;
+        position: fixed;
+        border: 5px;
+        border-color: black;
+        border-style: solid;
+        border-bottom-right-radius: 50px ;
+        border-top-right-radius: 50px ;
+        top: 150px;
+        left: -150%;
+        background:burlywood;
+    }
+    ul li i{
+        margin-right: 50px;
+    }
+    ul li i:first-child{
+        margin-top: 35px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
