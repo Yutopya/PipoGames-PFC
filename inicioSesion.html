@@ -18,9 +18,13 @@
                     <p>Inicio de sesión</p>
                 </div>
                 <div id="datos"> <!--Input de datos de usuario-->
-                    <input type="text" placeholder="Email" class="inputs">
-                    <i class="fas fa-eye-slash" id="ojo"></i>
-                    <input type="text" placeholder="Contraseña" class="inputs">
+                    <form>
+                        <input type="text" placeholder="Email" class="inputs" onblur="validaremail()">
+                        <p id="mensajeMail"></p>
+                        <i class="fas fa-eye-slash" id="ojo"></i>
+                        <input type="text" placeholder="Contraseña" class="inputs" onblur="validarcontrasenalogin()">
+                        <p id="mensajeCont"></p>
+                    </form>
                 </div>
                 <div id="boton">
                     <a href="index.html"><button type="submit" id="enviar">Enviar</button></a>
@@ -30,4 +34,5 @@
         </main>
         
     </body>
+    <script src="validaciones.js"></script>
 </html>

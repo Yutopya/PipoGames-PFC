@@ -85,6 +85,34 @@ function validarcontrasena(){
         mensaje.classList.add('invalido');
     }
 }
+function validarcontrasenalogin(){
+    let cont = formulario['elements'][1]['value'];
+    let mensaje = document.getElementById('mensajeCont');
+    let espacio = document.getElementById('espacioCont');
+
+    let expresion = /(?=.*\d{2}).{7,}/;
+
+    if(expresion.test(cont)){
+        // el contenido es correcto
+        console.log('Bien');
+        mensaje.textContent = 'La contraseña es correcta';
+        mensaje.classList.remove('invalido');
+        mensaje.classList.add('valido');
+        contok=true;
+    }else if(cont==''){
+        // no hay contenido
+        console.log('nada')
+        mensaje.textContent='';
+        mensaje.classList.remove('valido');
+        mensaje.classList.remove('invalido');
+    }else if(!expresion.test(cont)){
+        // el contenido no es correcto
+        console.log('Mal');
+        mensaje.textContent = 'La contraseña no es correcta';
+        mensaje.classList.remove('valido');
+        mensaje.classList.add('invalido');
+    }
+}
 
 function validarconf(){
     let cont = formulario['elements'][2]['value'];

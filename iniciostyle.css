@@ -67,3 +67,10 @@ input{
     margin-right: 10%;
     font-size: smaller;
 }
+.valido{
+    color:rgb(32, 181, 32);
+}
+
+.invalido{
+    color:rgb(255, 43, 43);
+}
