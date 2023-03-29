@@ -10,7 +10,7 @@ function validaremail(){
     if(expresion.test(mail)){
         // el contenido es correcto
         console.log('Bien');
-        mensaje.textContent = 'El email es correcto';
+        mensaje.textContent = 'El email es valido';
         mensaje.classList.remove('invalido');
         mensaje.classList.add('valido');
         mailok=true;
@@ -23,7 +23,7 @@ function validaremail(){
     }else if(!expresion.test(mail)){
         // el contenido no es correcto
         console.log('Mal');
-        mensaje.textContent = 'El email no es correcto';
+        mensaje.textContent = 'El email no es valido';
         mensaje.classList.remove('valido');
         mensaje.classList.add('invalido');
     }
@@ -38,7 +38,7 @@ function validarusuario(){
     if(expresion.test(user)){
         // el contenido es correcto
         console.log('Bien');
-        mensaje.textContent = 'El usuario es correcto';
+        mensaje.textContent = 'El usuario es valido';
         mensaje.classList.remove('invalido');
         mensaje.classList.add('valido');
         userok=true;
@@ -51,7 +51,7 @@ function validarusuario(){
     }else if(!expresion.test(user)){
         // el contenido no es correcto
         console.log('Mal');
-        mensaje.textContent = 'El usuario no es correcto';
+        mensaje.textContent = 'El usuario no es valido';
         mensaje.classList.remove('valido');
         mensaje.classList.add('invalido');
     }
@@ -67,7 +67,7 @@ function validarcontrasena(){
     if(expresion.test(cont)){
         // el contenido es correcto
         console.log('Bien');
-        mensaje.textContent = 'La contraseña es correcta';
+        mensaje.textContent = 'La contraseña es valido';
         mensaje.classList.remove('invalido');
         mensaje.classList.add('valido');
         contok=true;
@@ -80,7 +80,7 @@ function validarcontrasena(){
     }else if(!expresion.test(cont)){
         // el contenido no es correcto
         console.log('Mal');
-        mensaje.textContent = 'La contraseña no es correcta';
+        mensaje.textContent = 'La contraseña no es valido';
         mensaje.classList.remove('valido');
         mensaje.classList.add('invalido');
     }
@@ -95,7 +95,7 @@ function validarcontrasenalogin(){
     if(expresion.test(cont)){
         // el contenido es correcto
         console.log('Bien');
-        mensaje.textContent = 'La contraseña es correcta';
+        mensaje.textContent = 'La contraseña es valida';
         mensaje.classList.remove('invalido');
         mensaje.classList.add('valido');
         contok=true;
@@ -108,7 +108,7 @@ function validarcontrasenalogin(){
     }else if(!expresion.test(cont)){
         // el contenido no es correcto
         console.log('Mal');
-        mensaje.textContent = 'La contraseña no es correcta';
+        mensaje.textContent = 'La contraseña es invalida';
         mensaje.classList.remove('valido');
         mensaje.classList.add('invalido');
     }
