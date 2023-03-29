@@ -18,14 +18,22 @@
                     <p>Crea una cuenta</p>
                 </div>
                 <div class="datos"><!--Input de datos de usuarios-->
-                    <input type="text" placeholder="Email" class="inputs">
-                    <input type="text" placeholder="Nombre de usuario" class="inputs">
-                    <input type="text" placeholder="Contraseña" class="inputs">
-                    <input type="text" placeholder="Confirmar contraseña" class="inputs">
+                    <form>
+                        <input id="espacioMail" type="text" placeholder="Email" class="inputs" onblur="validaremail(); boton()" >
+                        <p id="mensajeMail"></p>
+                        <input id="espacioUser" type="text" placeholder="Nombre de usuario" class="inputs" onblur="validarusuario(); boton()">
+                        <p id="mensajeUser"></p>
+                        <input id="espacioCont" type="password" placeholder="Contraseña" class="inputs" onblur="validarcontrasena(); boton()">
+                        <p id="mensajeCont"></p>
+                        <input id="espacioConf" type="password" placeholder="Confirmar contraseña" class="inputs" onblur="validarconf(); boton()">
+                        <p id="mensajeConf"></p>
+                        <a href="gracias.html"><button type="button" class="enter" id="botonRegistro"> Crear cuenta</button></a>
+                    </form>
                 </div> <!--Redirección a la pagina de gracias-->
-                <a href="gracias.html"><button type="submit" class="enter"> Crear cuenta</button></a>
+                
             </div>
         </main>
         
     </body>
+    <script src="validaciones.js"></script>
 </html>
