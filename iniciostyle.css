@@ -17,6 +17,7 @@ nav{ /*Contenedor para el botón de vuelta a la pagina web*/
     padding: 1em;
     border: black solid;
     border-radius: 5em;
+    background-color: gainsboro;
 }
 button:hover{ 
     background-color: burlywood;

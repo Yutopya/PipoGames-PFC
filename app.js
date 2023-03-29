@@ -46,7 +46,6 @@ function inicio(){
         let div = document.createElement('div');
         div.setAttribute('class', 'card');
 
-        
         let divFondo = document.createElement('div');
         divFondo.setAttribute('id',items);
 
