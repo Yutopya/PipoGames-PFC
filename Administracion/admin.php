@@ -1,11 +1,17 @@
+<?php
+    require_once('database.php');
+    $database= new database();
+    $res = $database->getAll();
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="Yu y Raúl">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <script src="fontawesome.js"></script>
-        <link rel="shortcut icon" href="IMG/dim.png">
+        <script src="../fontawesome.js"></script>
+        <link rel="shortcut icon" href="../IMG/dim.png">
         <link rel="stylesheet" href="adminStyle.css">
     </head>
     <body>
@@ -30,12 +36,17 @@
                         <p>Dirección de email</p>
                         <i class="fas fa-trash"></i>
                 </div>
-                <ul></ul>
+                <ul>
+                    <?php
+
+                    ?>
+
+                </ul>
             </div>
         </main>
         <footer>
             <p>Holi 👋</p>
         </footer>
     </body>
-    <script src="administracion.js"></script>
+     <!--<script src="administracion.js"></script>-->
 </html>

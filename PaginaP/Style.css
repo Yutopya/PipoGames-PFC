@@ -137,37 +137,37 @@ video:hover{/*Hasta que se pasa el raton por encima*/
     display: none;
 }
 #OUTERWILDS{ /*Todos estos ids representan la card de cada juego para ponerles un fondo diferente*/
-    background-image: url(img/outerwilds_cover.png);
+    background-image: url(../img/outerwilds_cover.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 #RISKOFRAIN2{
-    background-image: url(img/riskofrain_cover.png);
+    background-image: url(../img/riskofrain_cover.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 #GTAV{
-    background-image: url(img/gtav_cover.png);
+    background-image: url(../img/gtav_cover.png);
     background-size: 100%;
         background-repeat: no-repeat;
 }
 #ASTRONEER{
-    background-image: url(img/astroneer_cover.png);
+    background-image: url(../img/astroneer_cover.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 #CASTLECRASHERS{
-    background-image: url(img/castlecrashers_cover.png);
+    background-image: url(../img/castlecrashers_cover.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 #CYBERPUNK2077{
-    background-image: url(img/cyberpunk_cover.png);
+    background-image: url(../img/cyberpunk_cover.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 #AHATINTIME{
-    background-image: url(img/ahatIntime_cover.png);
+    background-image: url(../img/ahatIntime_cover.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }

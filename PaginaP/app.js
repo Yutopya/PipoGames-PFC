@@ -2,37 +2,37 @@ let juegos ={
     OUTERWILDS: {
         nombre: "Outer Wilds",
         plataforma: "PC",
-        video: "Video/Outer Wilds - Official Reveal Trailer.mp4#t=25",
+        video: "../Video/Outer Wilds - Official Reveal Trailer.mp4#t=25",
     },
     RISKOFRAIN2: {
         nombre:"Risk of Rain 2",
         plataforma: "PC",
-        video: "Video/Risk of Rain 2_ Launch Trailer.mp4#t=20",
+        video: "../Video/Risk of Rain 2_ Launch Trailer.mp4#t=20",
     },
     ASTRONEER:{
         nombre:"Astroneer",
         plataforma: "PC",
-        video: "Video/ASTRONEER - Release Trailer.mp4#t=22",
+        video: "../../Video/ASTRONEER - Release Trailer.mp4#t=22",
     },
     GTAV:{
         nombre:"Grand Theft Auto V",
         plataforma: "PC",
-        video: "Video/Grand Theft Auto V Trailer.mp4#t=20",
+        video: "../../Video/Grand Theft Auto V Trailer.mp4#t=20",
     },
     CASTLECRASHERS:{
         nombre:"Castle crashers",
         plataforma: "PC",
-        video: "Video/Castle Crashers Remastered Announcement Trailer.mp4#t=21",
+        video: "../../Video/Castle Crashers Remastered Announcement Trailer.mp4#t=21",
     },
     CYBERPUNK2077:{
         nombre:"Cyberpunk2077",
         plataforma: "PC",
-        video: "Video/Cyberpunk 2077 - Tráiler E3 2018.mp4#t=23",
+        video: "../../Video/Cyberpunk 2077 - Tráiler E3 2018.mp4#t=23",
     },
     AHATINTIME:{
         nombre:"A hat in time",
         plataforma: "PC",
-        video: "Video/A Hat in Time - Announcement Trailer _ PS4.mp4#t=10",
+        video: "../../Video/A Hat in Time - Announcement Trailer _ PS4.mp4#t=10",
     }
 };
 
