@@ -1,8 +1,8 @@
 <?php
+    $tabla = 0;
     require_once('../database.php');
     $database= new database();
-    $res = $database->getJuegos();
-
+    $tabla = $_GET['tabla'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <script src="../fontawesome.js"></script>
         <link rel="shortcut icon" href="../IMG/dim.png">
-        <link rel="stylesheet" href="adminStyle.css?ver=1.1">
+        <link rel="stylesheet" href="adminStyle.css">
     </head>
     <body>
     
@@ -30,30 +30,21 @@
             
         </header>
         <main> 
-            <div class="contenedor">
-                <table>
-                <?php
-                    echo '<thead>';
-                    echo '<tr class="cabecerat">';
-                    echo '<td>Nombre</td>';
-                    echo '<td>Precio</td>';
-                    echo '<td>Plataforma</td>';
-                    echo '<td>Fecha Salida</td>';
-                    echo '<td>Acciones</td>';
-                    echo '<tbody>';
-                    foreach($res as $row){
-                        echo '<tr>';
-                        echo '<td>'.$row['nombre'].'</td>';
-                        echo '<td>'.$row['precio_base'].'</td>';
-                        echo '<td>'.$row['plataforma'].'</td>';
-                        echo '<td>'.$row['fecha_lanzamiento'].'</td>';
-                        echo '<td>
-                        <a href="./mod.php?id='.$row['id'].'"><i class="fas fa-pen"></i></a>
-                        <a href="./delete.php?id='.$row['id'].'"><i class="fas fa-trash"></i></a>';
-                    }
-                ?>
-
-                </table>
+            <div class="todo">
+                <div class="contenedor">
+                    <a href="?tabla=0">Tienda</a>
+                    <a href="?tabla=1">Juegos</a>
+                    <a href="?tabla=2">Usuario</a>
+                </div>
+                <div class="contenedor">
+                    <table>
+                    <?php
+                    
+                    $database->getDatos($tabla);
+                        
+                    ?>
+                    </table>
+                </div>
             </div>
         </main>
         <footer>
