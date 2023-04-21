@@ -5,7 +5,6 @@ html, body {
     align-items: center;
 }
 i{
-
     margin-left: 10px;
 }
 .tienda{
@@ -27,28 +26,12 @@ a:visited{
 .cubo{
     width: 90px;
 }
-header{ 
-    background-color: burlywood;    
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    padding-right: 10px;
-    padding-left: 10px;
-    top: 0;
-    z-index: 2;
-    border-bottom: 5px;
-    border-bottom-style: solid;
-    border-bottom-color: black;
+
+.fa-trash:hover{
+    color:red;
 }
-ul li{
-    list-style: none;
-}
-li{
-    width: 100%;
-}
-ul{
-    margin:0%;
-    margin-bottom: 2%;
+.fa-pen:hover{
+    color: darkorchid;
 }
 .contenedor{
     border: 5px;
@@ -62,30 +45,41 @@ ul{
     padding:2em;
     background-color: burlywood;
     transition: all .1s linear; 
-    width: 50%;
 }
-.leyenda{
-    padding-top: 10px;
-    margin-left: 40px;
-    margin-right: 40px;
+header{ 
+    background-color: burlywood;    
     display: flex;
-    flex-wrap: wrap;
-    gap: 20%;
-    padding-left: 4%;
-    border-bottom: 3px;
+    justify-content: space-between;
+    position: sticky;
+    padding-right: 10px;
+    padding-left: 10px;
+    top: 0;
+    z-index: 2;
+    border-bottom: 5px;
     border-bottom-style: solid;
     border-bottom-color: black;
 }
-.card{ /*Configuracion de espacio para cada card y su transicion para cuando cambie de tamaño mas adelante*/
-    width: 30%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 150px;
-    grid-auto-rows: minmax(40px, auto);
-    padding-right: 60%;
-    padding-left: 5%;
+.cabecerat{
+    background-color: cadetblue;
 }
+table,td{
 
+    border-color: black;
+    border-style: solid;
+    border-collapse: collapse;
+}
+a{
+    width: 100%;
+}
+tr{
+    background-color:burlywood
+}
+tbody tr:nth-child(even){
+    background-color: white;
+}
+tbody tr:nth-child(odd){
+    background-color:lightgray;
+}
 i{
     margin-right: 20px;
 }
@@ -122,13 +116,6 @@ footer p{
     margin-left: 20px;
     font-family: "Comic Sans MS", "Comic Sans";
 }
-
-
-
-
-
-
-
 @media screen and (min-width: 200px) and (max-width: 600px){
     .leyenda{
         padding-top: 10px;

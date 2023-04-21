@@ -1,7 +1,7 @@
 <?php
     require_once('../database.php');
     $database= new database();
-    $res = $database->getJuegos();
+    $res = $database->getAll();
 
 ?>
 <!DOCTYPE html>
@@ -12,12 +12,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <script src="../fontawesome.js"></script>
         <link rel="shortcut icon" href="../IMG/dim.png">
-        <link rel="stylesheet" href="adminStyle.css?ver=1.1">
+        <link rel="stylesheet" href="adminStyle.css">
     </head>
     <body>
     
         <header>
-            <a href="../PaginaP/index.html">
+            <a href="index.html">
             <section class="tienda" >
                 <p>Pipo Juegos</p>
             </section>
@@ -31,15 +31,19 @@
         </header>
         <main> 
             <div class="contenedor">
+                <div class="leyenda">
+                        <p>Nombre del usuario</p>
+                        <p>Dirección de email</p>
+                        <i class="fas fa-trash"></i>
+                </div>
                 <table>
                 <?php
                     echo '<thead>';
-                    echo '<tr class="cabecerat">';
-                    echo '<td>Nombre</td>';
+                    echo '<tr>';
+                    echo '<td>Marca</td>';
+                    echo '<td>Modelo</td>';
                     echo '<td>Precio</td>';
-                    echo '<td>Plataforma</td>';
-                    echo '<td>Fecha Salida</td>';
-                    echo '<td>Acciones</td>';
+                    echo '<td>Descripción</td>';
                     echo '<tbody>';
                     foreach($res as $row){
                         echo '<tr>';
@@ -47,9 +51,6 @@
                         echo '<td>'.$row['precio_base'].'</td>';
                         echo '<td>'.$row['plataforma'].'</td>';
                         echo '<td>'.$row['fecha_lanzamiento'].'</td>';
-                        echo '<td>
-                        <a href="./mod.php?id='.$row['id'].'"><i class="fas fa-pen"></i></a>
-                        <a href="./delete.php?id='.$row['id'].'"><i class="fas fa-trash"></i></a>';
                     }
                 ?>
 
