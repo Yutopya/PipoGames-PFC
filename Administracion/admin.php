@@ -3,6 +3,12 @@
     require_once('../database.php');
     $database= new database();
     $tabla = $_GET['tabla'];
+    $num;
+    if($num=0){
+        header("Location: admin.php?tabla=0");
+        $num=1;
+    }
+    
 ?>
 <!DOCTYPE html>
 <html>
