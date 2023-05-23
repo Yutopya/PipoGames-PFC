@@ -11,9 +11,19 @@ i{
     font-family: "Comic Sans MS", "Comic Sans";
     
 }
+.selectTabla{
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+.selectTabla:hover{
+    background-color: rgb(167, 138, 102);
+}
 a{
     text-decoration: none;
-    
+    width: 100%;    
 }
 a:link{ 
     color:  black; 
@@ -33,13 +43,27 @@ a:visited{
 .fa-pen:hover{
     color: darkorchid;
 }
+.fa-plus-square:hover{
+    color: #6c9d43;
+    
+}
+.fa-plus-square{
+    font-size: 30px;
+
+}
 .todo{
     display: grid;
     align-items: center;
     justify-content: center;
 }
-
+.add{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 97%;
+    margin-top: 10px;
+}
 .contenedor{
+    display: flex;
     margin-top: 75px;
     border: 5px;
     border-color: black;
@@ -48,10 +72,16 @@ a:visited{
     padding:2em;
     background-color: burlywood;
     transition: all .1s linear; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contenedor:last-child{
+    padding-bottom: 15px;
 }
 .contenedor:first-child {
     display: flex;
     text-align: center;
+    flex-wrap: nowrap;
     gap: 30px;
 }
 header{ 
@@ -75,9 +105,6 @@ table,td{
     border-color: black;
     border-style: solid;
     border-collapse: collapse;
-}
-a{
-    width: 100%;
 }
 tr{
     background-color:burlywood
@@ -155,6 +182,7 @@ footer p{
         width: 70%;
     }
 }
+
 @media screen and (min-width: 600px) and (max-width: 769px){
     .leyenda{
         padding-top: 10px;

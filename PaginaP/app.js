@@ -1,89 +1,67 @@
-let juegos ={
-    OUTERWILDS: {
-        nombre: "Outer Wilds",
-        plataforma: "PC",
-        video: "../Video/Outer Wilds - Official Reveal Trailer.mp4#t=25",
-    },
-    RISKOFRAIN2: {
-        nombre:"Risk of Rain 2",
-        plataforma: "PC",
-        video: "../Video/Risk of Rain 2_ Launch Trailer.mp4#t=20",
-    },
-    ASTRONEER:{
-        nombre:"Astroneer",
-        plataforma: "PC",
-        video: "../../Video/ASTRONEER - Release Trailer.mp4#t=22",
-    },
-    GTAV:{
-        nombre:"Grand Theft Auto V",
-        plataforma: "PC",
-        video: "../../Video/Grand Theft Auto V Trailer.mp4#t=20",
-    },
-    CASTLECRASHERS:{
-        nombre:"Castle crashers",
-        plataforma: "PC",
-        video: "../../Video/Castle Crashers Remastered Announcement Trailer.mp4#t=21",
-    },
-    CYBERPUNK2077:{
-        nombre:"Cyberpunk2077",
-        plataforma: "PC",
-        video: "../../Video/Cyberpunk 2077 - Tráiler E3 2018.mp4#t=23",
-    },
-    AHATINTIME:{
-        nombre:"A hat in time",
-        plataforma: "PC",
-        video: "../../Video/A Hat in Time - Announcement Trailer _ PS4.mp4#t=10",
-    }
-};
+let buscar=document.getElementById('buscador');
+buscar.setAttribute('onkeyup',"search()");
+let input="";
+let busqueda;
+let juegos= document.getElementsByClassName('njuego');
+let cards=document.getElementsByClassName('card');
 
-inicio();
-
-function inicio(){
-    let main = document.getElementsByTagName('main')[0];
-    let iniVideo
-    for(items in juegos){
-        
-        let div = document.createElement('div');
-        div.setAttribute('class', 'card');
-
-        let divFondo = document.createElement('div');
-        divFondo.setAttribute('id',items);
-
-        let divVideo = document.createElement('div');
-        divVideo.setAttribute('class','fondoV');
-
-        let video = document.createElement('video');
-        video.setAttribute('muted','muted');
-        video.setAttribute('onmouseover','this.play()');
-        video.setAttribute('onmouseout','this.pause()');
-
-        let contenedor = document.createElement('div');
-        contenedor.setAttribute('class','container');
-        let h4 = document.createElement('h4');
-        let b = document.createElement('b');
-
-        let source = document.createElement('source');
-        for (datos in juegos[items]){
-            if(datos=='video'){
-                source.setAttribute('src',juegos[items][datos]);
-                iniVideo=juegos[items][datos]+'';
-                video.setAttribute('onmouseout','this.currentTime='+iniVideo.substring(iniVideo.length, iniVideo.length-2));
-            }else if(datos=='iniVideo')  {
-                
-            }else if (datos=='nombre'){
-                b.textContent=juegos[items][datos];
+//Función buscador 
+function search(){
+    busqueda = buscar['value'];
+    if (busqueda == "") {
+        for (let i=0; i<juegos.length;i++) {
+            if(cards[i].hasAttribute('style')){
+                cards[i].removeAttribute('style');
             }
         }
+    }else{
+        for(let j=0; j<juegos.length;j++){
+            input=juegos[j].textContent+"";
+            input=input.toLowerCase();
+            if(input.includes(busqueda)){
+                if(cards[j].hasAttribute('style')){
+                    cards[j].removeAttribute('style');
+                }
+            }else{
+                cards[j].setAttribute('style', 'display: none');
+            }
+        }
+    }
+}
 
-        video.appendChild(source);
-        divVideo.appendChild(video);
-        divFondo.appendChild(divVideo);
-        div.appendChild(divFondo);
+let btnFiltro = document.getElementsByClassName('filtroPlat');
+let platjuego = document.getElementsByClassName('plataforma');
+let limpiar = document.getElementById('limpiar');
+let botones = document.getElementsByTagName('button');
 
-        h4.appendChild(b);
-        contenedor.appendChild(h4)
-        div.appendChild(contenedor);
-
-        main.appendChild(div);
+//Función filtro por plataforma
+function filtroPlataforma(plataforma){
+    for(let k=0; k<platjuego.length;k++){   
+        input=platjuego[k].value+"";
+        input=input.toLowerCase();
+        if(plataforma=='clean'){
+            if(cards[k].hasAttribute('style')){
+                cards[k].removeAttribute('style');
+                botones[k].removeAttribute('style');
+            }
+            botones[k].removeAttribute('style');
+            limpiar.setAttribute('style', 'display: none');
+        }else{
+            for(let l=0; l<botones.length;l++){
+                if(botones[l].textContent==plataforma){
+                    botones[l].setAttribute('style','background-color: rgb(167, 138, 102);border-radius: 10px;');
+                }else if(botones[l].hasAttribute('style')){
+                    botones[l].removeAttribute('style');
+                }
+            }
+            if(input.includes(plataforma.toLowerCase()+"")){
+                if(cards[k].hasAttribute('style')){
+                    cards[k].removeAttribute('style');
+                }
+            }else{
+                cards[k].setAttribute('style', 'display: none');
+                limpiar.setAttribute('style', 'display: block');
+            }
+        }
     }
 }

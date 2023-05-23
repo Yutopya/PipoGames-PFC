@@ -7,6 +7,7 @@ create table usuario(
     nombre varchar(45) not null,
     apellidos Varchar(80),
     email varchar(50) not null,
+    id_rol int (2) not null,
     PRIMARY KEY (id)
 )ENGINE = InnoDB;
 
@@ -15,9 +16,10 @@ create table juegos(
     nombre varchar(45) not null,
 	precio_base varchar(5) not null,
     genero varchar(200) not null,
-    plataforma varchar(6) not null,
+    plataforma varchar(20) not null,
     fecha_lanzamiento date,
     descripcion varchar(500) not null,
+    link_img varchar(100) not null,
     PRIMARY KEY (id)
 )ENGINE = InnoDB;
 
@@ -49,18 +51,19 @@ create table Juegos_has_tiendas(
 
 
 /*Usuarios*/
-insert into usuario (id, nombre, apellidos, email) values (null, "pipo", "papo","pipopapo@gmail.com");
-insert into usuario (id, nombre, apellidos, email) values (null, "Pedro", "Picapiedra","Picapedro@yahoo.es");
-insert into usuario (id, nombre, apellidos, email) values (null, "Antonio", "Navarro","Anton@gmail.com");
+insert into usuario (id, nombre, apellidos, email, id_rol) values (null, "pipo", "papo","pipopapo@gmail.com",1);
+insert into usuario (id, nombre, apellidos, email, id_rol) values (null, "Pedro", "Picapiedra","Picapedro@yahoo.es",2);
+insert into usuario (id, nombre, apellidos, email, id_rol) values (null, "Antonio", "Navarro","Anton@gmail.com",2);
 
 /*Juegos*/
-insert into juegos (id, nombre, genero, precio_base, plataforma, fecha_lanzamiento, descripcion)values(null,"Outer Wilds","Mundo abierto, Puzzles, Misterio", "20.00", "PC", '2019-05-28', "Outer Wilds, nombrado juego del año 2019 por Giant Bomb, Polygon, Eurogamer y The Guardian, es un galardonado título de mundo abierto, que se desarrolla en un enigmático sistema solar confinado a un bucle temporal infinito.");
-insert into juegos (id, nombre, genero, precio_base, plataforma, fecha_lanzamiento, descripcion)values(null,"Risk of rain 2", "Rogue-Like", "20.00", "PS", '2020-08-11', "Lucha contra hordas de monstruos enloquecidos junto a tus amigos o en solitario para lograr escapar de un planeta alienígena sumido en el caos. Combina el botín de maneras asombrosas y domina cada personaje hasta encarnar la destrucción que tanto te aterraba tras tu primer aterrizaje forzoso.");
-insert into juegos (id, nombre, genero, precio_base, plataforma, fecha_lanzamiento, descripcion)values(null,"Grand Theft Auto 5", "Mundo abierto, FPS", "60.00", "PC", '2015-04-14', "Grand Theft Auto V para PC ofrece a los jugadores la opción de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de 4K y disfrutar del juego a 60 fotogramas por segundo.");
-insert into juegos (id, nombre, genero, precio_base, plataforma, fecha_lanzamiento, descripcion)values(null,"Atroneer","Mundo abierto, Supervivencia, Espacio, Cooperativo", "23.00", "PC", '2016-12-16', "¡Explora y da forma a mundos lejanos! Astroneer se desarrolla durante la fiebre del oro del siglo XXV. Los jugadores deben explorar las fronteras del espacio exterior, arriesgar su vida y sus recursos en entornos hostiles en un intento por alcanzar la ansiada riqueza.");
-insert into juegos (id, nombre, genero, precio_base, plataforma, fecha_lanzamiento, descripcion)values(null,"Castle Crashers","Cooperativo, Hack and Slash, Aventura", "12.00", "Xbox", '2012-9-26',"¡Ábrete paso golpeando, acuchillando y machacando hasta la victoria en esta aventura arcade en 2D de The Behemoth!");
-insert into juegos (id, nombre, genero, precio_base, plataforma, fecha_lanzamiento, descripcion)values(null,"Cyberpunk 2077","Ciberpunk, Mundo abierto, Rol, FPS", "60.00", "PC", '2020-12-10',"Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en el futuro sombrío de Night City, una peligrosa megalópolis obsesionada con el poder, el glamur y las incesantes modificaciones corporales.");
-insert into juegos (id, nombre, genero, precio_base, plataforma, fecha_lanzamiento, descripcion)values(null,"A Hat in Time","Plataformas, Aventura, Indie", "28.00", "PS", '2017-10-5',"A Hat in Time is a cute-as-heck 3D platformer featuring a little girl who stitches hats for wicked powers! Freely explore giant worlds and recover Time Pieces to travel to new heights!");
+insert into juegos (nombre, genero, precio_base, plataforma, fecha_lanzamiento, descripcion, link_img)values
+("Outer Wilds","Mundo abierto, Puzzles, Misterio", "20.00", "PC", '2019-05-28', "Outer Wilds, nombrado juego del año 2019 por Giant Bomb, Polygon, Eurogamer y The Guardian, es un galardonado título de mundo abierto, que se desarrolla en un enigmático sistema solar confinado a un bucle temporal infinito.", "../IMG/outerwilds"),
+("Risk of rain 2", "Rogue-Like", "20.00", "Playstation", '2020-08-11', "Lucha contra hordas de monstruos enloquecidos junto a tus amigos o en solitario para lograr escapar de un planeta alienígena sumido en el caos. Combina el botín de maneras asombrosas y domina cada personaje hasta encarnar la destrucción que tanto te aterraba tras tu primer aterrizaje forzoso.", "../IMG/riskofrain"),
+("Grand Theft Auto 5", "Mundo abierto, FPS", "60.00", "PC", '2015-04-14', "Grand Theft Auto V para PC ofrece a los jugadores la opción de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de 4K y disfrutar del juego a 60 fotogramas por segundo.", "../IMG/gtav"),
+("Atroneer","Mundo abierto, Supervivencia, Espacio, Cooperativo", "23.00", "PC", '2016-12-16', "¡Explora y da forma a mundos lejanos! Astroneer se desarrolla durante la fiebre del oro del siglo XXV. Los jugadores deben explorar las fronteras del espacio exterior, arriesgar su vida y sus recursos en entornos hostiles en un intento por alcanzar la ansiada riqueza.","../IMG/astroneer"),
+("Castle Crashers","Cooperativo, Hack and Slash, Aventura", "12.00", "Xbox", '2012-9-26',"¡Ábrete paso golpeando, acuchillando y machacando hasta la victoria en esta aventura arcade en 2D de The Behemoth!","../IMG/castlecrashers"),
+("Cyberpunk 2077","Ciberpunk, Mundo abierto, Rol, FPS", "60.00", "PC", '2020-12-10',"Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en el futuro sombrío de Night City, una peligrosa megalópolis obsesionada con el poder, el glamur y las incesantes modificaciones corporales.","../IMG/cyberpunk2077"),
+("A Hat in Time","Plataformas, Aventura, Indie", "28.00", "Playstation", '2017-10-5',"A Hat in Time is a cute-as-heck 3D platformer featuring a little girl who stitches hats for wicked powers! Freely explore giant worlds and recover Time Pieces to travel to new heights!","../IMG/ahatintime");
 
 /*Tiendas*/
 insert into tiendas (id, nombre, moneda, region, metodo_pago, tipo_tienda) values (null, "Steam", "Euros", "Europa", "Visa", "Primera Mano");

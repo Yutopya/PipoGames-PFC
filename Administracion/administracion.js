@@ -1,5 +1,3 @@
-
-
 function generarUsuarios(){
     let lista = document.getElementsByTagName('ul')[0];
     let color = true;
@@ -26,7 +24,5 @@ function generarUsuarios(){
         li.appendChild(botonsito);
         lista.appendChild(li);
     }
-    
-    
 }
 generarUsuarios();
