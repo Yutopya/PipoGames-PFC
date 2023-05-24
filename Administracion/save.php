@@ -1,6 +1,5 @@
 <?php
-if(isset($_GET['id']) && isset($_GET['tabla'])){
-    $id = $_GET['id'];
+if(isset($_GET['tabla'])){
     $tabla = $_GET['tabla'];
     require_once ('../database.php');
     $database = new Database();
@@ -19,7 +18,7 @@ if(isset($_GET['id']) && isset($_GET['tabla'])){
 <body>
     <main>
         <?php
-            $database->modDatos($tabla,$id);
+            $database->addDatos($tabla);
         ?>
     </main>
 </body>

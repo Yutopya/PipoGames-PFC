@@ -32,9 +32,6 @@ li a{
     margin-left: 20px;
     font-family: "Comic Sans MS", "Comic Sans";
 }
-.sesion{ /*Cambia el cursor a pointer*/
-    cursor: pointer;
-}
 select{
     margin-right: 10px;
 }
@@ -54,10 +51,7 @@ button{ /*Aqui se hacen cambios en el boton de inicio de sesion*/
     justify-content: center;
     padding-top: 4px;
 }
-button:hover{
-    border-radius: 10px;
-    background-color: rgb(167, 138, 102);
-}
+
 a{
     text-decoration: none;
     
@@ -79,6 +73,41 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.dropdown {
+    display: inline-block;
+    position: relative;
+    margin-right: 70px;
+    
+}
+.fa-user{
+    font-size: xx-large;
+    padding: 5px;
+}   
+.fa-user:hover{
+    border-radius: 10px;
+    background-color: rgb(167, 138, 102);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100px;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    background-color: burlywood
+}
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: rgb(167, 138, 102);
 }
 div.busqueda{ /*Todo esto representa la decoración de la barra de busqueda*/
     display: flex;
@@ -115,6 +144,7 @@ main{/* Este es el espacio reservado para meter las cards con los juegos dentro*
     padding:2em;
     background-color: burlywood;
     transition: all .1s linear; 
+    padding-bottom: 150px;
 } 
 .card{ /*Configuracion de espacio para cada card y su transicion para cuando cambie de tamaño mas adelante*/
     transition: 0.4s;

@@ -1,6 +1,17 @@
 <?php
-    require_once('../database.php');
-    $database= new database();
+require_once('../database.php');
+$database= new database();
+session_start();
+if(isset($_SESSION['usuario'])){
+  if($_SESSION['usuario']['id_rol'] == 2){
+  }else if($_SESSION['usuario']['id_rol'] == 1){
+    header('Location: admin.php');
+  }else{
+    header('Location: ../auth/login.php');
+  }
+}else{
+  header('Location: ../auth/login.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,7 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="../IMG/misc/dim.png">
     <script src="../fontawesome.js"></script>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="../PaginaP/Style.css">
 </head>
 <body>
     <header>
@@ -43,7 +54,14 @@
         </div>
         <div> <!--Botón de inicio de sesion-->
             <div class="sesion">
-                <button id="init"><a href="../Auth/login.php">Iniciar Sesión</a></button>
+            <?php echo '<p style="margin-right: 10px">'.$_SESSION['usuario']['nombre'].'</p>'?>
+                <div class="dropdown">
+                <i class="fas fa-user" style="color: #000000"></i>
+                    <div class="dropdown-content">
+                        <a href="wishlist.php">Wish List</a>
+                        <a href="../Auth/logout.php">Cerrar Sesión</a></a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -55,12 +73,12 @@
     </nav>
     <main> 
         <?php            
-            $database -> mostrarJuegosPrincipal();
+            $database -> mostrarJuegosUsers();
         ?>
     </main>
     <footer>
         <p>Holi 👋</p>
     </footer>
 </body>
-<script src="app.js"></script>
+<script src="../PaginaP/app.js"></script>
 </html>

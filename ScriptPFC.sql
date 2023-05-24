@@ -2,12 +2,12 @@ create database if not exists pfc;
 
 use pfc;
 
-create table usuario(
+create table usuarios(
 	id int not null auto_increment,
     nombre varchar(45) not null,
-    apellidos Varchar(80),
     email varchar(50) not null,
     id_rol int (2) not null,
+    contrasena varchar(30) not null,
     PRIMARY KEY (id)
 )ENGINE = InnoDB;
 
@@ -24,11 +24,10 @@ create table juegos(
 )ENGINE = InnoDB;
 
 create table Usuario_has_Juegos(
-	usuario_id int,
-    juegos_id int,
-    constraint foreign key (usuario_id) references usuario(id),
-    constraint foreign key (juegos_id) references juegos(id)
+	usuarios_id int,
+    juegos_id int
 )ENGINE = InnoDB;
+
 
 create table tiendas(
 	id int not null auto_increment,
@@ -49,11 +48,10 @@ create table Juegos_has_tiendas(
     constraint foreign key (tiendas_id) references tiendas(id)
 )ENGINE = InnoDB;
 
-
 /*Usuarios*/
-insert into usuario (id, nombre, apellidos, email, id_rol) values (null, "pipo", "papo","pipopapo@gmail.com",1);
-insert into usuario (id, nombre, apellidos, email, id_rol) values (null, "Pedro", "Picapiedra","Picapedro@yahoo.es",2);
-insert into usuario (id, nombre, apellidos, email, id_rol) values (null, "Antonio", "Navarro","Anton@gmail.com",2);
+insert into usuarios (id, nombre, email, id_rol, contrasena) values (null, "pipo","pipopapo@gmail.com",1, "contrasena01");
+insert into usuarios (id, nombre, email, id_rol, contrasena) values (null, "Pedro","Picapedro@yahoo.es",2, "contrasena02");
+insert into usuarios (id, nombre, email, id_rol, contrasena) values (null, "Antonio","Anton@gmail.com",2, "contrasena03");
 
 /*Juegos*/
 insert into juegos (nombre, genero, precio_base, plataforma, fecha_lanzamiento, descripcion, link_img)values
@@ -89,7 +87,7 @@ insert into Juegos_has_tiendas (precio_tienda, stock_tienda, juegos_id, tiendas_
 insert into Juegos_has_tiendas (precio_tienda, stock_tienda, juegos_id, tiendas_id) values ("25.00",1,7,2);
 
 
-select * from usuario;
+select * from usuarios;
 select * from juegos;
 select * from tiendas;
 select * from Juegos_has_tiendas;

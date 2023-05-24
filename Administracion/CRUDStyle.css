@@ -1,0 +1,12 @@
+form{
+    border-color: black;
+    border-style: solid;
+    padding: 15px;
+    gap: 5px;
+    background-color: burlywood;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}

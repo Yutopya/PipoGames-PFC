@@ -13,9 +13,9 @@
         $database -> updateJuegos($valores);
            break;
        case 2:
-          self::modUsuarios($id);
+        $valores = [$_POST['id'], $_POST['nombre-input'], $_POST['email-input'], $_POST['id_rol-input'], $_POST['contrasena-input']];
+        $database -> updateUsuarios($valores);
            break;
     }
-
   header('Location: admin.php?tabla='.$tabla);
 ?>
